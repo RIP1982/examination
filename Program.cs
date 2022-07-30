@@ -15,3 +15,14 @@ else
 }
 
 string[] strArray = new string[size];
+
+FillArray(strArray);
+
+void FillArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"Введите {i} элемент массива: ");
+        array[i] = Console.ReadLine();
+    }
+}
