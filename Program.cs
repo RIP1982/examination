@@ -21,6 +21,32 @@ PrintArray(strArray);
 
 Console.WriteLine();
 
+int sizeArrayNew = 0;
+
+for (int i = 0; i < strArray.Length; i++)
+{
+
+    if (strArray[i].Length <= 3)
+    {
+        sizeArrayNew++;
+    }
+}
+
+string[] strArrayNew = new string[sizeArrayNew];
+int j = 0;
+
+for (int i = 0; i < strArray.Length; i++)
+{
+    if (strArray[i].Length <= 3)
+    {
+        strArrayNew[j] = strArray[i];
+        j++;
+    }
+}
+
+Console.WriteLine("Новый массив строк:");
+PrintArray(strArrayNew);
+
 void FillArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
